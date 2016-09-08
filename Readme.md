@@ -6,6 +6,7 @@ Adaptive Memory Management Scheme
   - [Synopsis](#synopsis)
   - [Requirements](#requirements)
   - [Installation](#installation)
+  - [API](#api)
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [License](#license)
@@ -33,6 +34,60 @@ $ cd "Source Code"/
 ```
 This version can be used either on Arduino based platforms or Windows/Linux.
 
+## API
+
+Initialize a memory space used by the memory manager (only for Windows/Linux). In this case the memory manager will be used as a sub-allocator.
+```
+void memory_initialize ( size_t );
+```
+Allocates a memory space and returns the address.
+```
+void * memory_allocate ( size_t );
+```
+Reallocates a memory block and returns the address of the new memory space.
+```
+void * memory_reallocate ( void *, size_t );
+```
+Registering the address of a pointer to the pointers section of the memory manager. Returns NULL in case of failure.
+```
+void * memory_pointer_add ( void * );
+```
+Deregistering the address of a pointer from the pointers section of the memory manager. Returns NULL in case of failure.
+```
+void * memory_pointer_remove ( void * );
+```
+Moves a memory block to an other point in memory.
+```
+void memory_move ( void *, void *, size_t );
+```
+Returns the size of the memory
+```
+size_t memory_size ( );
+```
+Returns the size of the available memory
+```
+size_t memory_available ( );
+```
+Returns the size of the data section
+```
+size_t memory_data_section_size ( );
+```
+Returns the size of the pointers section
+```
+size_t memory_pointers_section_size ( );
+```
+Prints some information about the data section. (data block addresses)
+```
+void memory_print_data_section ( );
+```
+Prints some information about the pointers section. (pointer base address/pointer address)
+```
+void memory_print_pointers_section ( );
+```
+Prints general memory information
+```
+void memory_print_information ( );
+```
 
 ## Usage
 
