@@ -28,7 +28,7 @@ Its use requires no hardware MMU, and requires few or no manual changes to appli
 
 Download the source code and copy both header and source files to your project's folder.
 ```
-$ git clone https://gitlab.com/iikem/adaptive-memory-management
+$ git clone https://gitlab.com/iikem/adaptive-memory-management  or  download as zip
 $ cd "Source Code"/
 ```
 This version can be used either on Arduino based platforms or Windows/Linux.
