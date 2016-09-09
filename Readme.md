@@ -4,10 +4,12 @@ Adaptive Memory Management Scheme
 
 
   - [Synopsis](#synopsis)
+  - [Compatibility](#compatibility)
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [API](#api)
   - [Usage](#usage)
+  - [Examples](#examples)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -20,6 +22,18 @@ The proposed Adaptive Memory Management Scheme (AMM) maintains a balance between
 
 Its use requires no hardware MMU, and requires few or no manual changes to application software. The proposed scheme is evaluated providing encouraging results regarding performance and reliability compared to the default memory allocator. Allocation of fixed and random size blocks delivers a speedup ranging from 2x to 5x over the standard GLIBC allocator, while the de-allocation process is only 20% percent slower, but provides a perfect (0%) defragmented memory.
 
+## Compatibility
+This is the main Compatibility section, listing all devices that are supported by Adaptive Memory Management Scheme.
+<br/><br/>
+  - PJRC Teensy Boards (3.0/3.1/3.2) [Using microVisual plugin for Microsoft Visual Studio and Arduino Software 1.6]
+  - Arduino Mini (3.3v) [Using microVisual plugin for Microsoft Visual Studio and Arduino Software 1.4/1.5/1.6]
+  - Arduino Micro (3.3v) [Using microVisual plugin for Microsoft Visual Studio and Arduino Software 1.4/1.5/1.6]
+  - Arduino Uno (5v) [Using microVisual plugin for Microsoft Visual Studio and Arduino Software 1.4/1.5/1.6]
+  - AVR 40 Pin 16MHz 32K 8A/D - ATMEGA32A-PU [Arduino Software 1.4/1.5/1.6 using ATMega support]
+  - ATMEGA168P-20PU [Arduino Software 1.4/1.5/1.6 using ATMega support]
+  - AVR 8 Pin 20MHz 8K 4A/D - ATtiny85 [Arduino Software 1.4/1.5/1.6 using ATtiny support] 
+  - Ubuntu 16.04 [Using gcc g++ make]
+  - Windows 10 [Using Microsoft Visual Studio 2015 / C++]
 
 ## Requirements
 
@@ -121,6 +135,11 @@ Step 4: deregister the pointer from the memory manager
 ```
 $ memory_pointer_remove(&pointer);
 ```
+## Examples
+```
+[ Under Construction ]
+```
+
 ## Contributing
 One of the easiest ways to contribute is to participate in discussions and discuss issues. You can also contribute by submitting pull requests with code changes. Please log a new issue in the appropriate section [Issues] or by e-mail.
 The best way to get your bug fixed is to be as detailed as you can be about the problem.  Providing a minimal project with steps to reproduce the problem is ideal. 
